@@ -9,11 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 모든 요청을 받아서 uri에 따라 컨트롤러 메서드를 호출한다.
+ */
 @WebServlet("/mvc/*")
 public class DispatcherServlet extends HttpServlet {
 
     @Autowired
     UserController userController;
+    @Autowired
+    ArticleController articleController;
 
     @Override
     protected void service(HttpServletRequest request,
@@ -28,6 +33,10 @@ public class DispatcherServlet extends HttpServlet {
             case "/mvc/user/userInfo" -> userController.userInfo(request, response);
             case "/mvc/user/addUser" -> userController.addUser(request, response);
             case "/mvc/user/login" -> userController.login(request, response);
+            case "/mvc/article/articleList" -> articleController.articleList(request, response);
+            case "/mvc/article/articleForm" -> articleController.articleForm(request, response);
+            case "/mvc/article/articleInfo" -> articleController.articleInfo(request, response);
+            case "/mvc/article/addArticle" -> articleController.addArticle(request, response);
             default -> response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
     }
