@@ -6,6 +6,6 @@
          version="4.0">
 
     <error-page>
-        <location>/webapp/WEB-INF/jsp/error/500.jsp</location>
+        <location>/webapp/WEB-INF/jsp/error/400.jsp</location>
     </error-page>
 </web-app>

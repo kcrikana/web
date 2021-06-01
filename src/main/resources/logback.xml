@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="kr.mjc.jacob" level="debug"/>
+    <logger name="kr.mjc.minbeom" level="debug"/>
 
     <root level="info">
         <appender-ref ref="STDOUT"/>

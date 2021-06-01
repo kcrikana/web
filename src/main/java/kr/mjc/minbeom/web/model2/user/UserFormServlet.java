@@ -14,7 +14,7 @@ public class UserFormServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        request.getRequestDispatcher("/WEB-INF/jsp/model2/user/userForm.jsp")
+        request.getRequestDispatcher("/WEB-INF/jsp/model2/user/joinForm.jsp")
                 .forward(request, response);
     }
 }

@@ -6,7 +6,7 @@
     <base href="<%= request.getContextPath()%>/">
 </head>
 <body>
-<%@ include file="/WEB-INF/jsp/mvc/menu.jsp" %>
+<%@ include file="/WEB-INF/jsp/springmvc/v1/menu.jsp" %>
 <h3>사용자 목록</h3>
 <%
     List<User> userList = (List<User>) request.getAttribute("userList");

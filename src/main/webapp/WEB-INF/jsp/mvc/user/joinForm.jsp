@@ -1,9 +1,13 @@
 <%@ page import="java.util.Optional" %>
 <!DOCTYPE html>
 <html>
+<head>
+    <base href="<%= request.getContextPath()%>/">
+</head>
 <body>
+<%@ include file="/WEB-INF/jsp/mvc/menu.jsp" %>
 <h3>사용자 등록</h3>
-<form action="addUser" method="post">
+<form action="./mvc/user/addUser" method="post">
     <p><input type="email" name="email" placeholder="이메일" required autofocus/></p>
     <p><input type="password" name="password" placeholder="비밀번호" required/></p>
     <p><input type="text" name="name" placeholder="이름" required/></p>
