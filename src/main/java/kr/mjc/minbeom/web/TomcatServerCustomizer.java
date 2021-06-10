@@ -17,6 +17,7 @@ import java.util.HashSet;
 
 /**
  * 톰캣 서버 커스터마이저. JSP와 HTML을 UTF-8으로 인코딩한다.
+ * index.html을 welcome file로 등록한다.
  */
 @Component
 @Slf4j
@@ -42,6 +43,10 @@ public class TomcatServerCustomizer
                     new JspConfigDescriptorImpl(jspPropertyGroupDescriptors,
                             new HashSet<>());
             context.setJspConfigDescriptor(jspConfigDescriptor);
+
+            // add welcome file list
+            context.addWelcomeFile("/index.jsp");
+            context.addWelcomeFile("/index.jsp");
         });
         factory.setTomcatContextCustomizers(col);
         log.info("톰캣 커스터마이저 실행");

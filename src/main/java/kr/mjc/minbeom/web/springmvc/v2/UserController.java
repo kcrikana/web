@@ -66,7 +66,7 @@ public class UserController {
         } catch (DuplicateKeyException e) {
             // redirect할때 attribute를 저장
             attributes.addFlashAttribute("msg", "Duplicate email");
-            return "springmvc/v2/user/joinForm";
+            return "redirect:/app/springmvc/v2/user/joinForm";
         }
     }
 
