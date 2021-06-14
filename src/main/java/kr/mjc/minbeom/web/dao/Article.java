@@ -3,6 +3,8 @@ package kr.mjc.minbeom.web.dao;
 import lombok.Data;
 import org.owasp.encoder.Encode;
 
+import java.sql.Date;
+
 @Data
 public class Article {
     int articleId;
@@ -10,8 +12,8 @@ public class Article {
     String content;
     int userId;
     String name;
-    String cdate;
-    String udate;
+    Date cdate;
+    Date udate;
 
     public String getTitleHtml() {
         return Encode.forHtml(title);
